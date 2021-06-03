@@ -1,0 +1,13 @@
+#main{
+background-image: url(to-do-list-apps.jpg);
+height: 66vh;
+
+background-size: cover;
+opacity: 0.9;
+
+}
+@media(min-width:960px){
+    #h3 {
+      display: none;
+}
+}
