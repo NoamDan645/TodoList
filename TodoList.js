@@ -1,11 +1,13 @@
-const form = document.getElementById("add");
-const doList = document.getElementById("");
+const from = document.getElementById("add");
+const doList = document.getElementById("things");
+from.addEventListener("change", addDo);
+doList.addEventListener("click", removeDo);
 
-form.addEventListener("submit", addDo); // ERROR
-doList.addEventListener("click", removeDo); //ERROR
-
-function addDo() {
+function addDo(e) {
+  //e.preventDefault();
+  console.log("addDo");
   var newDo = document.getElementById("thing").value;
+
   var li = document.createElement("li");
   li.className = "list-group-item";
   li.appendChild(document.createTextNode(newDo));
@@ -19,7 +21,7 @@ function addDo() {
 }
 
 function removeDo(e) {
-  if (e.target.classList.contains("delete")) {
+  if (e.target.classList.contains("   delete")) {
     var li = e.target.parentElement;
     doList.removeChild(li);
   }
